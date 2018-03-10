@@ -4,7 +4,15 @@ int main(){
 	
 	scanf("%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,",&a,&b,&c,&d,&e,&f,&g,&h,&i,&j);
 	t=0;
+	
 	printf("%d\n",t);
+	
+	//2 leds - 1
+	//3 leds - 7
+	//4 leds - 4
+	//5 leds - 2,3,5
+	//6 leds - 0,9,6
+	//7 leds - 8
 	
 	t = (a == 1? t+2:(a == 7? t+3:(a == 4 ? t+4 :(a == 2 ||a == 3 || a == 5? t+5:(a == 0 || a == 9 || a == 6? t+6: t+7)))));
 	printf("%d\n",t);
@@ -26,9 +34,6 @@ int main(){
 	printf("%d\n",t);
 	t = (j == 1? t+2:(j == 7? t+3:(j == 4 ? t+4 :(j == 2 ||j == 3 || j == 5? t+5:(j == 0 || j == 9 || j == 6? t+6: t+7)))));
 	printf("%d\n",t);
-	
-	
-	
-	
+		
 return 0;
 }
