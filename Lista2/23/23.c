@@ -9,24 +9,26 @@ int main()
 	printf("Digite um inteiro.\n");
 	scanf("%d",&i);
 
-	int aux = 0;
+	int aux;
 	int aux2 = i;
 	int a,b = 0;
-	for(;aux < i+1;aux++){
-		for (a = 1; a < i;a++){
+
+	for(aux = 0;aux < i+1;aux++){
+		for (a = 2; a < i;a++){
 			if(aux%a != 0){
+				j[aux] = 0;
 				bool = 0;
+				
+			}else{
+				bool = 1;
+				j[aux] = 1;
 				break;
 			}
-			if(a != aux)
-				bool = 1;
-
-
+			
 		}
-		if (bool == 1)
-			j[count++] = aux;
-
 	}
-	printf("O numero %d %s primo.\n",i,(bool == 0?"nao eh": "eh") );
+	
+
+	printf("O numero %d %s primo.\n",i,(j[i] == 1? "nao eh":"eh") );
 	return 0;
 }
