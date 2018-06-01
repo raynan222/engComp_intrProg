@@ -7,6 +7,8 @@ int tam = 1;
 char **pontPont;
 FILE *fp;
 
+
+//prototipos.
 void alocar();
 void getDoArq();
 void printNoArq();
@@ -15,6 +17,7 @@ void menu();
 void stream(char *file ,char *type);
 void adicionar();
 void printBanco();
+
 
 int main(int argc, char const *argv[])
 {
@@ -28,7 +31,6 @@ int main(int argc, char const *argv[])
 
 	getDoArq();
 	menu(fp);
-
 
 	return 0;
 }
@@ -138,6 +140,7 @@ void getDoArq(){
 
 }
 
+//Realoca o vetor com mais uma posicao.
 void alocar(){
 	pontPont = (char **) realloc(pontPont,(tam +1)*sizeof(char *));
 	pontPont[tam++] = (char *)malloc(80*sizeof(char));
